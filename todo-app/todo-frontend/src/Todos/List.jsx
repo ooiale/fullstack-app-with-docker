@@ -1,4 +1,5 @@
 import React from 'react'
+import SingleTodo from './SingleTodo'
 
 const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   const onClickDelete = (todo) => () => {
@@ -10,40 +11,17 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   }
 
   return (
-    <>
-      {todos.map(todo => {
-        const doneInfo = (
-          <>
-            <span>This todo is done</span>
-            <span>
-              <button onClick={onClickDelete(todo)}> Delete </button>
-            </span>
-          </>
-        )
-
-        const notDoneInfo = (
-          <>
-            <span>
-              This todo is not done
-            </span>
-            <span>
-              <button onClick={onClickDelete(todo)}> Delete </button>
-              <button onClick={onClickComplete(todo)}> Set as done </button>
-            </span>
-          </>
-        )
-
-        return (
-          <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '70%', margin: 'auto' }}>
-            <span>
-              {todo.text} 
-            </span>
-            {todo.done ? doneInfo : notDoneInfo}
-          </div>
-        )
-      }).reduce((acc, cur) => [...acc, <hr />, cur], [])}
-    </>
+    <div>
+      {todos.map(todo => (
+          <SingleTodo
+            key={todo._id} // assuming each todo has a unique 'id' property
+            todo={todo}
+            deleteTodo={onClickDelete(todo)}
+            completeTodo={onClickComplete(todo)}
+          />
+      ))}
+    </div>
   )
-}
 
+}
 export default TodoList

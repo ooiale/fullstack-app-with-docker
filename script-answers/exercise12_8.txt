@@ -1,0 +1,120 @@
+Script started on 2024-07-29 04:16:42+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="99" LINES="14"]
+# ^a ^^?  mongosh -u root -p example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	66a717bd30b6308d10149f47
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.10[0m
+Using MongoDB:		7.0.12
+[1m[33mUsing Mongosh[0m:		2.2.10
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-07-28T16:21:52.431+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never' in this binary version
+   2024-07-28T16:21:52.431+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f48'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f49'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66a70a0d32a76473fc74a51f'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'66a716e0be4857cf0d149f48'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({text[33mtext[39m:[32m"[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[40G [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32mt[39m[32m"[39m)[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m[85G})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'66a717e530b6308d10149f48'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m})[87G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f48'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f49'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66a70a0d32a76473fc74a51f'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'66a716e0be4857cf0d149f48'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m
+  },
+  {
+    _id: ObjectId([32m'66a717e530b6308d10149f48'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m})[87G[1D[1G[0Jthe_database> db.todos.insertOne[44m([49m{[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m})[86G[1D[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m})[85G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m,})[86G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, })[87G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, d})[88G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [36mdo[39m})[89G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, don})[90G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, done})[91G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m:})[92G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: })[93G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: F})[94G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fa})[95G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fal})[96G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fals})[97G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: False}) [98G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fals})[97G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fal})[96G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: Fa})[95G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: F})[94G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: })[93G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: f})[94G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: fa})[95G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: fal})[96G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: fals})[97G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: [33mfalse[39m}) [98G[1A[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: [33mfalse[39m}) [1G[1A[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: [33mfalse[39m}) [1G
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'66a7180f30b6308d10149f49'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbet"[39m, [33mdone[39m: [33mfalse[39m}) [1G[1A[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f48'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'66a66fbf59143778f9149f49'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66a70a0d32a76473fc74a51f'[39m),
+    text: [32m'Write cucumber'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'66a716e0be4857cf0d149f48'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m
+  },
+  {
+    _id: ObjectId([32m'66a717e530b6308d10149f48'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m
+  },
+  {
+    _id: ObjectId([32m'66a7180f30b6308d10149f49'[39m),
+    text: [32m'Increase the number of tools in my toolbet'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+# exit
+
+Script done on 2024-07-29 04:18:49+00:00 [COMMAND_EXIT_CODE="0"]

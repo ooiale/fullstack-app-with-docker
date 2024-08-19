@@ -1,0 +1,10 @@
+Script started on 2024-07-25 17:54:27-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;ale@ale: /mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[01;32male@ale[00m:[01;34m/mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[00m$ [7mdocker run -it ub[27m[7mu[27m[7mntu bash[27m[A]0;ale@ale: /mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[01;32male@ale[00m:[01;34m/mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[00m$ docker run -it ubuntu bash
+[?2004l[?2004h]0;root@f4a51f1e2b0d: /root@f4a51f1e2b0d:/# [7mmkdir -p /usr/src/app[27mmkdir -p /usr/src/app
+[?2004l[?2004h]0;root@f4a51f1e2b0d: /root@f4a51f1e2b0d:/# [7mtouch /usr/src/app/index.js[27mtouch /usr/src/app/index.js
+[?2004l[?2004h]0;root@f4a51f1e2b0d: /root@f4a51f1e2b0d:/# [Kexit
+[?2004lexit
+e[?2004h]0;ale@ale: /mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[01;32male@ale[00m:[01;34m/mnt/c/Users/bxand/Downloads/javascript/fullStackCourse/part12/part12-containers-applications[00m$ exit[K[K[K[Kexit
+[?2004lexit
+
+Script done on 2024-07-25 17:55:43-03:00 [COMMAND_EXIT_CODE="0"]
